@@ -1,8 +1,36 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import { ChakraProvider } from '@chakra-ui/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import theme from '../styles/theme';
+
+function MyApp({ Component, pageProps, router }: AppProps) {
+  return (
+    <ChakraProvider theme={theme}>
+      <motion.div
+        key={router.route}
+        initial={'pageInitial'}
+        animate={'pageAnimate'}
+        exit={'pageExit'}
+        variants={{
+          pageInitial: {
+            opacity: 0,
+          },
+          pageAnimate: {
+            opacity: 1,
+          },
+          pageExit: {
+            backgroundColor: 'white',
+            filter: `invert()`,
+            opacity: 0,
+          },
+        }}
+      >
+        <Component {...pageProps} />
+      </motion.div>
+    </ChakraProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
