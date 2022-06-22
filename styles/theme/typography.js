@@ -36,13 +36,20 @@ export const Text = {
       textStyle: 'footerTitle',
       color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
     }),
-
+    headingText: (props) => ({
+      textStyle: 'headingText',
+      color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
+    }),
     footerText: (props) => ({
       textStyle: 'footerText',
       color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
     }),
-    subtitle: (props) => ({
-      textStyle: 'subTitle',
+    contactTitle: (props) => ({
+      textStyle: 'contactTitle',
+      color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
+    }),
+    contactSubtitle: (props) => ({
+      textStyle: 'contactSubtitle',
       color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
     }),
     numtitle: (props) => ({
@@ -60,9 +67,9 @@ export const Text = {
 
 export const textStyles = {
   h1: {
-    fontSize: { base: '1em', sm: '1.3em', lg: '2em' },
-    fontWeight: 100,
-    lineHeight: { base: '1.15em', lg: '130%' },
+    fontSize: { base: '2.5em', sm: '2.3em', lg: '2em' },
+    fontWeight: 900,
+    lineHeight: { base: '2.15em', lg: '130%' },
   },
   h2: {
     fontSize: { base: '2em', xl: '2.5em' },
@@ -72,8 +79,7 @@ export const textStyles = {
   h3: {
     fontSize: '1.5em',
     fontWeight: 400,
-
-    lineHeight: '32px',
+    lineHeight: { base: '1.95em', lg: '1.95em' },
   },
   h4: {
     fontSize: { base: '0.938em', xl: '1.063em' },
@@ -90,6 +96,11 @@ export const textStyles = {
     fontWeight: 700,
     lineHeight: { base: '1.125em', md: '1.375em', lg: '1.5em' },
   },
+  headingText: {
+    fontSize: { base: '1.5em', md: '3em', xl: '3.5em' },
+    fontWeight: 700,
+    lineHeight: { base: '1.313em', md: '1.313em', lg: '1.5em' },
+  },
   footerTitle: {
     fontSize: { base: '0.875em', md: '0.875em', xl: '1em' },
     fontWeight: 300,
@@ -99,5 +110,15 @@ export const textStyles = {
     fontSize: { base: '0.75em', md: '0.813em', xl: '0.875em' },
     fontWeight: 100,
     lineHeight: { base: '1.313em', md: '1.313em', lg: '1.5em' },
+  },
+  contactTitle: {
+    fontSize: { base: '0.625em', md: '0.813em', xl: '1em' },
+    fontWeight: 600,
+    lineHeight: { base: '1em', md: '1.250em', lg: '1.5em' },
+  },
+  contactSubtitle: {
+    fontSize: { base: '0.625em', md: '0.813em', xl: '1em' },
+    fontWeight: 100,
+    lineHeight: { base: '1em', md: '1.250em', lg: '1.5em' },
   },
 };
