@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 
 export default function Projects() {
   const {
-    query: { id, title },
+    query: { largeURL },
   } = useRouter();
 
   return (
     <>
-      <motion.img src={`/images/${id}.jpg`} width={'300px'} />
+      <motion.img src={`/images/${largeURL}.jpg`} width={'300px'} />
     </>
   );
 }

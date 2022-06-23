@@ -52,6 +52,14 @@ export const Text = {
       textStyle: 'contactSubtitle',
       color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
     }),
+    projectCardTitle: (props) => ({
+      textStyle: 'projectCardTitle',
+      color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
+    }),
+    projectCardSubtitle: (props) => ({
+      textStyle: 'projectCardSubtitle',
+      color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
+    }),
     numtitle: (props) => ({
       textStyle: 'numTitle',
       color: props.colorMode === 'light' ? 'primary.dark' : 'secondary.dark',
@@ -120,5 +128,17 @@ export const textStyles = {
     fontSize: { base: '0.625em', md: '0.813em', xl: '1em' },
     fontWeight: 100,
     lineHeight: { base: '1em', md: '1.250em', lg: '1.5em' },
+  },
+  projectCardTitle: {
+    fontSize: { base: '0.625em', md: '0.625em', xl: '0.75em' },
+    fontWeight: 700,
+    fontFamily: 'Montserrat',
+    lineHeight: { base: '1.625em', md: '1.250em', lg: '1.250em' },
+  },
+  projectCardSubtitle: {
+    fontSize: { base: '0.625em', md: '0.625em', xl: '0.75em' },
+    fontFamily: 'Montserrat',
+    fontWeight: 300,
+    lineHeight: { base: '1.5em', md: '1.250em', lg: '1.250em' },
   },
 };

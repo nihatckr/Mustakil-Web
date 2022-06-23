@@ -1,4 +1,4 @@
-import { Flex, VStack } from '@chakra-ui/react';
+import { Divider, Flex, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import React from 'react';
@@ -21,9 +21,11 @@ const Layout = ({ children }: LayoutProps) => {
         <Flex as={'header'} w='full' maxH={16} h='full' mt={'80px'}>
           <Header />
         </Flex>
+        <Divider mx={4} />
         <Flex flex={1} w='full'>
           {children}
         </Flex>
+        <Divider mx={4} />
         <Flex as={motion.footer} w='full' pt={12}>
           <Footer />
         </Flex>

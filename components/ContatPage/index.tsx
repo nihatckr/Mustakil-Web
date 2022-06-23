@@ -5,7 +5,7 @@ import Map from './Map'
 
 const ContactPage = () => {
     return (
-        <Flex width={'full'} display='flex' margin={'auto'} flexDir={'column'} position={'relative'}>
+        <Flex width={'full'} display='flex' margin={'auto'} flexDir={'column'} position={'relative'} mb={20}>
 
             <Box width={'full'} minH={'640px'} marginTop={'120px'} >
                 <Map />

@@ -1,4 +1,4 @@
-import { Box, Flex, Link, HStack, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Link, HStack, Text, VStack, Divider } from '@chakra-ui/react';
 
 import React, { useState } from 'react';
 
@@ -49,10 +49,12 @@ export const Header = () => {
       animate={isOpen ? 'open' : 'closed'}
       minH={16}
       display={'flex'}
+      flexDir={'column'}
       width={'full'}
       position={'sticky'}
       top={0}
       zIndex={1}
+
     >
       <Box
         display={'flex'}
@@ -87,6 +89,7 @@ export const Header = () => {
           ''
         )}
       </Box>
+
     </Flex>
   );
 };
